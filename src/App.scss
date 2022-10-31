@@ -1,0 +1,109 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "heading heading"
+    "break session"
+    "timer timer"
+    "controls controls";
+  gap: 30px;
+}
+
+.main-heading {
+  grid-area: heading;
+}
+
+.break-wrapper {
+  grid-area: break;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "label label label"
+    "decrement length increment";
+  gap: 10px;
+  border: 2px solid #1a1a1a;
+  border-radius: 10px;
+  padding: 10px;
+
+  #break-label {
+    grid-area: label;
+  }
+
+  #break-decrement {
+    grid-area: decrement;
+  }
+
+  #break-length {
+    grid-area: length;
+  }
+
+  #break-increment {
+    grid-area: increment;
+  }
+}
+
+.session-wrapper {
+  grid-area: session;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "label label label"
+    "decrement length increment";
+  gap: 10px;
+  border: 2px solid #1a1a1a;
+  border-radius: 10px;
+  padding: 10px;
+
+  #session-label {
+    grid-area: label;
+  }
+
+  #session-decrement {
+    grid-area: decrement;
+  }
+
+  #session-length {
+    grid-area: length;
+  }
+
+  #session-increment {
+    grid-area: increment;
+  }
+}
+
+.timer-wrapper {
+  grid-area: timer;
+  justify-self: center;
+  align-self: center;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-width: 200px;
+  padding: 50px;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+}
+
+.timer-controls-wrapper {
+  grid-area: controls;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
